@@ -1,7 +1,15 @@
-public class New {
-    import java.io.IOException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Scanner;
+
+
+public class New {
+    public static void main(String[] args) {
+        String url = urlToString("https://www.bls.gov/tus/charts/chart9.txt");
+        System.out.println(url);
+        // write your code here
+        System.out.println(url.length());
+    }
 
     /**
      * Retrieve contents from a URL and return them as a string.

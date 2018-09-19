@@ -3,12 +3,20 @@ import java.net.URL;
 import java.util.Scanner;
 
 
-public class New {
+public class webScraper {
     public static void main(String[] args) {
-        String url = urlToString("https://www.bls.gov/tus/charts/chart9.txt");
-        System.out.println(url);
-        // write your code here
-        System.out.println(url.length());
+        String text = urlToString("http://erdani.com/tdpl/hamlet.txt");
+        System.out.println(text);
+        System.out.println(text.length());
+
+        String[] word = text.split(" ");
+        int count = 0;
+        for (int i = 0; i < word.length; i++) {
+            if (word[i].equals("Prince")) {
+                count++;
+            }
+        }
+        System.out.println("The number of the word is " + count);
     }
 
     /**
